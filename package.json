@@ -1,0 +1,15 @@
+{
+  "name": "mp3-stamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-id3-writer": "^4.1.0",
+    "prompts": "^2.0.1"
+  }
+}
