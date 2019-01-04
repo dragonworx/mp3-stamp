@@ -14,13 +14,13 @@ Noice! Much quicker, less friction to our creation process. Just write those tag
 
 ## Installation
 
-Install the tool globally to be able to use the `mp3-stamp` command from the terminal at any location *.
+Install the tool globally to be able to use the `mp3stamp` command from the terminal at any location *.
 
 ```
 npm install mp3-stamp -g
 ```
 
-*\* you may need to restart your terminal to be able to use the `mp3-stamp` command from any path after first install. If you get "Command not found..." type errors, this is likely the case.*
+*\* you may need to restart your terminal to be able to use the `mp3stamp` command from any path after first install. If you get "Command not found..." type errors, this is likely the case.*
 
 ## Usage
 
@@ -31,7 +31,7 @@ cd my-audio-project
 vim my-song.mp3.json
 ```
 
-Edit and configure the tags you need *(See "Tag Configuration" section below)* then save the config file and run the `mp3-stamp` tool from that same folder.
+Edit and configure the tags you need *(See "Tag Configuration" section below)* then save the config file and run the `mp3stamp` command from that same folder.
 
 ```
 mp3-stamp
@@ -41,7 +41,7 @@ You will be asked to select the mp3 file, and the json configuration file in the
 
 Your tags and covers will be applied!
 
-If you wish to specify the base path (eg. you already have a terminal open in a different location) you can pass it as the sole argument to the `mp3-stamp` command.
+If you wish to specify the base path (eg. you already have a terminal open in a different location) you can pass it as the sole argument to the `mp3stamp` command.
 
 ```
 mp3-stamp ../../my-other-audio-project
