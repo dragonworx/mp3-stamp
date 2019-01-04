@@ -1,13 +1,17 @@
 {
   "name": "mp3-stamp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Small utility to automate applying mp3 tags and cover images to files",
   "main": "./lib/index.js",
   "scripts": {
     "start": "node ./bin/cli.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ali Chamas",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dragonworx/mp3-stamp"
+  },
+  "license": "MIT",
   "dependencies": {
     "browser-id3-writer": "^4.1.0",
     "cli-color": "^1.4.0",
