@@ -10,10 +10,14 @@
   "license": "ISC",
   "dependencies": {
     "browser-id3-writer": "^4.1.0",
-    "cli-color": "^1.4.0"
+    "cli-color": "^1.4.0",
+    "prompts": "^2.0.1"
   },
   "bin": {
     "mp3stamp": "./bin/cli.js"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "engines" : {
+    "node" : ">=4.9.1"
+  }
 }
