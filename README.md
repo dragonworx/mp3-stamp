@@ -1,39 +1,47 @@
 # MP3 Stamp
 
-A small command-line utility to automate writing mp3 tags to mp3 audio files.
+A small command-line utility to automate writing mp3 tags and covers to mp3 audio files.
 
 For music content creators, generating new mp3 files is a common routine. Opening those fresh files in iTunes or any other media applications simply to edit tags and apply a cover can be a tedious and repeditive task. Especially if you are regenerating the file after changes.
 
-mp3-stamp lets you create a small `.json` file which contains all the tag info you want to write. Keep that file next to your audio file and just run this tool (globally) to apply the tags easily.
+mp3-stamp lets you create a small `.mp3.json` file which contains all the tag info you want to write (including specifying cover images). Keep that file next to your audio file and just run this tool (globally) to apply the tags quickly and easily.
 
-## Usage
+## Use Case
 
-Image we have an audio project folder called `my-audio-project` and inside is a new mp3 file called `my-song.mp3`.
+Imagine we have an audio project folder called `my-audio-project` and inside is a new mp3 file called `my-song.mp3` that we generated from our favourite audio software (DAW). We want to add this to our music library, or share it but first we need tags and a cover. It may be ok to edit these tags and apply a cover in iTunes (or similar media app or tag editor), but if we overwrite this file (eg. making an updated version) we have to repeat this process through a UI over and over again. Instead, let's use a small `.mp3.json` file which lives in the same folder where we generate our mp3 file, and use that config file to specify the tags and cover, similar to a preset or defaults. Then every time we recreate the file, we just run this command line tool and apply the metadata.
 
-Install the tool globally to be able to use the `mp3-stamp` command via the terminal from any location *.
+Noice! Much quicker, less friction to our creation process. Just write those tags and set that cover like a boss.
+
+## Installation
+
+Install the tool globally to be able to use the `mp3-stamp` command from the terminal at any location *.
 
 ```
 npm install mp3-stamp -g
 ```
 
-*\* you may need to restart the terminal to be able to use the new global `mp3-stamp` global command from your path*
+*\* you may need to restart your terminal to be able to use the `mp3-stamp` command from any path after first install. If you get "Command not found..." type errors, this is likely the case.*
 
-Now in the same folder as your mp3 audio file, create a new  file with the same mp3 filename, but with `.json` added to end.
+## Usage
+
+Open a terminal at the location ofh your mp3 audio file, and create a new `.mp3.json` config file. We'll use the same file name, and just append `.mp3.json`. You don't have to use the same filename, but it helps to group file together.
 
 ```
 cd my-audio-project
-touch my-song.mp3.json
+vim my-song.mp3.json
 ```
 
-Configure the tags you need *(See "Tag Configuration" section below)* then run the `mp3-stamp` tool and select the mp3 file and json file when prompted.
+Edit and configure the tags you need *(See "Tag Configuration" section below)* then save the config file and run the `mp3-stamp` tool from that same folder.
 
 ```
 mp3-stamp
 ```
 
-You will be asked to select the mp3 file, and the json configuration file in the current path.
+You will be asked to select the mp3 file, and the json configuration file in the current path. This is useful if you want to store several mp3 files in the same folder, or use different configs for different reasons.
 
-If you wish to specify the base path from a different folder, you can pass it as an argument to the `mp3-stamp` command.
+Your tags and covers will be applied!
+
+If you wish to specify the base path (eg. you already have a terminal open in a different location) you can pass it as the sole argument to the `mp3-stamp` command.
 
 ```
 mp3-stamp ../../my-other-audio-project
