@@ -1,0 +1,58 @@
+{
+    "song": {
+        "artists": ["song-artists"],
+        "composers": ["song-composer"],
+        "genres": ["song-genre"],
+        "title": "song-title",
+        "number": "1",
+        "duration": null
+    },
+    "album": {
+        "title": "album-title",
+        "artist": "albumn-artist",
+        "disc": "1",
+        "release-date":null,
+        "release-year": 2019
+    },
+    "conductor": null,
+    "remixed-by": null,
+    "publisher": null,
+    "key": null,
+    "media-type": null,
+    "isrc": null,
+    "copyright": null,
+    "commercial": null,
+    "legal": null,
+    "bpm": null,
+    "payment": null,
+    "webpage": {
+        "artist": null,
+        "audio-file": null,
+        "audio-source": null,
+        "internet-radio": null,
+        "publisher": null
+    },
+    "cover": {
+        "other": null,
+        "icon-file": null,
+        "icon-other": null,
+        "front": "cover.jpg",
+        "back": null,
+        "leaflet": null,
+        "media": null,
+        "soloist": null,
+        "artist": null,
+        "conductor": null,
+        "group": null,
+        "composer": null,
+        "lyricist": null,
+        "location": null,
+        "recording": null,
+        "performance": null,
+        "video-capture": null,
+        "fish": null,
+        "illustration": null,
+        "logo-artist": null,
+        "logo-publisher": null
+    }
+}
