@@ -104,9 +104,7 @@ Here is a list of all the supported tags and their expected types *- **Note** yo
 * `cover.logo-artist` - (Band/artist logotype)
 * `cover.logo-publisher` - (Publisher/Studio logotype)
 
-This npm package contains a file in the root named `template.mp3.json`. It contains all available tags for reference and has example values for the most common. It also assumes you have `cover.jpg` in the same folder as the mp3 and config. You can delete any unused tags you, or just leave them `null`.
-
-Here is an example:
+Here is an example of a config file:
 
 ```
 {
@@ -168,3 +166,13 @@ Here is an example:
     }
 }
 ```
+
+## Create config
+
+If you want to create a config at the current path, just pass the `--create` argument to the `mp3stamp` command. You can also use this argument with or without the basePath argument, if you wish to create a config file in a different location to the current working directory.
+
+```
+mp3stamp --create
+```
+
+This will ask you to pick an mp3 file from the current working (or base) path and will create a template config from the same filename. It contains all available tags for reference and has example values for the most common. It also assumes you have `cover.jpg` in the same folder as the mp3 and config. You can delete any unused tags you, or just leave them `null`.
