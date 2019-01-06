@@ -1,17 +1,17 @@
 {
     "song": {
+        "title": "song-title",
         "artists": ["song-artists"],
         "composers": ["song-composer"],
         "genres": ["song-genre"],
-        "title": "song-title",
         "number": "1",
         "duration": null
     },
     "album": {
         "title": "album-title",
-        "artist": "albumn-artist",
+        "artist": "album-artist",
         "disc": "1",
-        "release-date":null,
+        "release-date": null,
         "release-year": 2019
     },
     "conductor": null,

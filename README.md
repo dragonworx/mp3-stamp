@@ -55,10 +55,10 @@ The `.json` configuration file is just a simple json file with some top level ke
 
 Here is a list of all the supported tags and their expected types *- **Note** you can just specify `null` for any tags you don't want to specify, but want to leave in the file for reference (eg. you are copying a base template to make new configuration files).*
 
+* `song.title` *string*
 * `song.artists` *string[]*
 * `song.composers` *string[]*
 * `song.genres` *string[]*
-* `song.title` *string*
 * `song.number` *string*
 * `song.duration` *integer* - (ms)
 * `album.title` *string*
@@ -104,21 +104,21 @@ Here is a list of all the supported tags and their expected types *- **Note** yo
 * `cover.logo-artist` - (Band/artist logotype)
 * `cover.logo-publisher` - (Publisher/Studio logotype)
 
-Here is an example of a config file:
+Here is an example of a `*.mp3.json` config file:
 
 ```
 {
     "song": {
+        "title": "song-title",
         "artists": ["song-artist-1", "song-artist-2"],
         "composers": ["song-composer-1", "song-composer-2"],
         "genres": ["song-genre-1", "song-genre-2"],
-        "title": "song-title",
         "number": "1/6",
         "duration": 1000
     },
     "album": {
         "title": "album-title",
-        "artist": "albumn-artist",
+        "artist": "album-artist",
         "disc": "1/1",
         "release-date": 1012,
         "release-year": 2019
@@ -169,10 +169,10 @@ Here is an example of a config file:
 
 ## Create config
 
-If you want to create a config at the current path, just pass the `--create` argument to the `mp3stamp` command. You can also use this argument with or without the basePath argument, if you wish to create a config file in a different location to the current working directory.
+If you want to create a config file for an mp3 at the current path, just pass the `--create` argument to the `mp3stamp` command. You can also use this argument with or without the basePath argument (eg. if you wish to create a config file in a different location to the current working directory).
 
 ```
 mp3stamp --create
 ```
 
-This will ask you to pick an mp3 file from the current working (or base) path and will create a template config from the same filename. It contains all available tags for reference and has example values for the most common. It also assumes you have `cover.jpg` in the same folder as the mp3 and config. You can delete any unused tags you, or just leave them `null`.
+This will ask you to pick an mp3 file from the current working (or base) path, and will ask some basic questions to prefill the most common tags. You can also pick a cover file. It will then create a template config from the same mp3 filename. You can open the file for edit to refine the tag data, and delete any unused tags you, or just leave them `null`.
