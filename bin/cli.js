@@ -8,7 +8,6 @@ const optionDefinitions = [
   ];
 try {
     const options = commandLineArgs(optionDefinitions);
-    console.log(options);
     mp3Stamp(options.basePath, options.create);
 } catch (e) {
     console.log(cli.bold.red('Invalid options, pass basePath and/or --create.'));

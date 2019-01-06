@@ -1,6 +1,6 @@
 {
   "name": "mp3-stamp",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Small utility to automate applying mp3 tags and cover images to files",
   "main": "./lib/index.js",
   "scripts": {
