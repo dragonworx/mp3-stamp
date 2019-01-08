@@ -37,17 +37,13 @@ Edit and configure the tags you need *(See "Tag Configuration" section below)* t
 mp3-stamp
 ```
 
-You will be asked to select the mp3 file, and the json configuration file in the current path. This is useful if you want to store several mp3 files in the same folder, or use different configs for different reasons.
-
-Your tags and covers will be applied!
+You will be asked to select the mp3 file. The config file matching the same filename plus `.json` will be selected and your tags plus covers will be applied!
 
 If you wish to specify the base path (eg. you already have a terminal open in a different location) you can pass it as the sole argument to the `mp3stamp` command.
 
 ```
 mp3-stamp ../../my-other-audio-project
 ```
-
-The mp3 file will then be overwritten with a new mp3 file containing all configured tags (including cover if given).
 
 ## Tag Configuration
 
