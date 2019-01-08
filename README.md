@@ -24,7 +24,7 @@ npm install mp3-stamp -g
 
 ## Usage
 
-Open a terminal at the location ofh your mp3 audio file, and create a new `.mp3.json` config file. We'll use the same file name, and just append `.mp3.json`. You don't have to use the same filename, but it helps to group file together.
+Given our example of an audio folder with an mp3 inside called `my-song.mp3`, open a terminal at the location, and create a new file named `my-song.mp3.json`. You should name the config file the same as the mp3 file, but with a `.json` prefix. The command line tool will look for this convention.
 
 ```
 cd my-audio-project
@@ -172,3 +172,7 @@ mp3stamp --create
 ```
 
 This will ask you to pick an mp3 file from the current working (or base) path, and will ask some basic questions to prefill the most common tags. You can also pick a cover file. It will then create a template config from the same mp3 filename. You can open the file for edit to refine the tag data, and delete any unused tags you, or just leave them `null`.
+
+#### Mp3 file naming convention
+
+The tool supports the `<artist> - <title>.mp3` format. If files are named this way, the artist and title info will be prefilled when using the `--create` option.
