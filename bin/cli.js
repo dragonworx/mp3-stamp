@@ -3,7 +3,7 @@ const cli = require('cli-color');
 const commandLineArgs = require('command-line-args');
 const mp3Stamp = require('../lib/index.js');
 const optionDefinitions = [
-    { name: 'create', alias: 'v', type: Boolean },
+    { name: 'create', alias: 'c', type: Boolean },
     { name: 'basePath', type: String, multiple: false, defaultOption: true },
   ];
 try {
