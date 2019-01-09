@@ -22,9 +22,23 @@ npm install mp3-stamp -g
 
 *\* you may need to restart your terminal to be able to use the `mp3stamp` command from any path after first install. If you get "Command not found..." type errors, this is likely the case.*
 
-## Usage
+## Create Config
 
-Given our example of an audio folder with an mp3 inside called `my-song.mp3`, open a terminal at the location, and create a new file named `my-song.mp3.json`. You should name the config file the same as the mp3 file, but with a `.json` prefix. The command line tool will look for this convention.
+If you want to create a config file for an mp3 at the current path, just pass the `--create` argument to the `mp3stamp` command. You can also use this argument with or without the basePath argument (eg. if you wish to create a config file in a different location to the current working directory).
+
+```
+mp3stamp --create
+```
+
+![](img/mp3stamp-create.gif)
+
+This will ask you to pick an mp3 file from the current working (or base) path, and will ask some basic questions to prefill the most common tags. You can also pick a cover file. It will then create a template config from the same mp3 filename. You can open the file for edit to refine the tag data, and delete any unused tags you, or just leave them `null`.
+
+**You should always name the config file the same as the mp3 file, but with a `.json` prefix.** The command line tool will look for this convention.
+
+## Stamping Tags
+
+Given our example of an audio folder with an mp3 inside called `my-song.mp3` and a tag config file called `my-song.mp3.json`.
 
 ```
 cd my-audio-project
@@ -39,11 +53,18 @@ mp3-stamp
 
 You will be asked to select the mp3 file. The config file matching the same filename plus `.json` will be selected and your tags plus covers will be applied!
 
+![](img/mp3stamp-stamp.gif)
+
 If you wish to specify the base path (eg. you already have a terminal open in a different location) you can pass it as the sole argument to the `mp3stamp` command.
 
 ```
 mp3-stamp ../../my-other-audio-project
 ```
+
+
+#### Mp3 file naming convention
+
+The tool supports the `<artist> - <title>.mp3` format. If files are named this way, the artist and title info will be prefilled when using the `--create` option.
 
 ## Tag Configuration
 
@@ -162,17 +183,3 @@ Here is an example of a `*.mp3.json` config file:
     }
 }
 ```
-
-## Create config
-
-If you want to create a config file for an mp3 at the current path, just pass the `--create` argument to the `mp3stamp` command. You can also use this argument with or without the basePath argument (eg. if you wish to create a config file in a different location to the current working directory).
-
-```
-mp3stamp --create
-```
-
-This will ask you to pick an mp3 file from the current working (or base) path, and will ask some basic questions to prefill the most common tags. You can also pick a cover file. It will then create a template config from the same mp3 filename. You can open the file for edit to refine the tag data, and delete any unused tags you, or just leave them `null`.
-
-#### Mp3 file naming convention
-
-The tool supports the `<artist> - <title>.mp3` format. If files are named this way, the artist and title info will be prefilled when using the `--create` option.
