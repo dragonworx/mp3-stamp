@@ -52,7 +52,9 @@ This will ask you to pick an mp3 file from the current working (or base) path, a
 You can also pick a cover file if any are present. It will then create a template config from the same mp3 filename. 
 You can open the file for edit to refine the tag data, and delete any unused tags you, or just leave them `null`.
 
-You can of course manually create the file and write the data you need (according to the schema described later).
+You also have the option of applying the new data straight to mp3 file, if you don't need anymore editing.
+
+You can of course manually create and edit the file and write the data you need (according to the schema described later).
 
 **NOTE: If you are manually creating the config file then you must ensure the filename is the same as the mp3, but with a `.json` extension. The tool uses this convention to find files.**
 
