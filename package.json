@@ -1,7 +1,7 @@
 {
   "name": "mp3-stamp",
-  "version": "1.6.3",
-  "description": "Small utility to automate applying mp3 tags and cover images to files",
+  "version": "2.0.0",
+  "description": "Simple command-line utility to automate applying tags and covers to mp3 files",
   "main": "./lib/index.js",
   "scripts": {
     "start": "node ./bin/cli.js"
@@ -11,12 +11,24 @@
     "type": "git",
     "url": "https://github.com/dragonworx/mp3-stamp"
   },
-  "keywords": ["mp3", "tag", "tags", "creation", "cover", "jpg", "writer", "utility", "tool", "audio"],
+  "keywords": [
+    "mp3",
+    "tag",
+    "tags",
+    "creation",
+    "cover",
+    "jpg",
+    "writer",
+    "utility",
+    "tool",
+    "audio"
+  ],
   "license": "MIT",
   "dependencies": {
     "browser-id3-writer": "^4.1.0",
     "cli-color": "^1.4.0",
     "command-line-args": "^5.0.2",
+    "emojic": "^1.1.15",
     "prompts": "^2.0.1"
   },
   "bin": {
